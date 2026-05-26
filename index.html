@@ -1,222 +1,286 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Who's Who in Mirabilis — HERO Guild Field Compendium</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --accent:      #8b6914;
-      --accent-mid:  #b08830;
-      --accent-light:#d4aa55;
-      --accent-dim:  #5c4710;
-      --text:        #2c2c2c;
-      --text-soft:   #5a4a2a;
-      --bg:          #f0e8d6;
-      --card-bg:     #fdf7ec;
-      --card-hover:  #fff9f0;
-      --border:      #c8a85a;
-      --border-soft: #dfc990;
-      --shadow:      rgba(90,60,10,0.13);
-      --tag-guild:   #2c4a1e;
-      --tag-guild-bg:#d6e8c6;
-      --tag-loc:     #3a1e4a;
-      --tag-loc-bg:  #ddc6e8;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Who's Who in Mirabilis — HERO Guild Field Compendium</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --accent: #8b6914;
+  --accent-mid: #b08830;
+  --accent-light:#d4aa55;
+  --accent-dim: #5c4710;
+  --text: #2c2c2c;
+  --text-soft: #5a4a2a;
+  --bg: #f0e8d6;
+  --card-bg: #fdf7ec;
+  --card-hover: #fff9f0;
+  --border: #c8a85a;
+  --border-soft: #dfc990;
+  --shadow: rgba(90,60,10,0.13);
+  --tag-guild: #2c4a1e;
+  --tag-guild-bg:#d6e8c6;
+  --tag-loc: #3a1e4a;
+  --tag-loc-bg: #ddc6e8;
+}
 
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    body {
-      font-family: 'Caudex', serif;
-      background-color: var(--bg);
-      background-image: repeating-linear-gradient(
-        0deg, transparent, transparent 28px,
-        rgba(139,105,20,0.04) 28px, rgba(139,105,20,0.04) 29px
-      );
-      color: var(--text);
-      min-height: 100vh;
-    }
+body {
+  font-family: 'Caudex', serif;
+  background-color: var(--bg);
+  background-image: repeating-linear-gradient(
+    0deg, transparent, transparent 28px,
+    rgba(139,105,20,0.04) 28px, rgba(139,105,20,0.04) 29px
+  );
+  color: var(--text);
+  min-height: 100vh;
+}
 
-    /* ── HEADER ── */
-    header {
-      background: linear-gradient(160deg, var(--accent-dim) 0%, var(--accent) 60%, var(--accent-mid) 100%);
-      color: #fdf7ec;
-      text-align: center;
-      padding: 2.5rem 1.5rem 2rem;
-      position: relative; overflow: hidden;
-      border-bottom: 3px solid var(--accent-dim);
-    }
-    header::before {
-      content: ''; position: absolute; inset: 0;
-      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-      pointer-events: none;
-    }
-    .header-ornament {
-      font-size: 1.1rem; letter-spacing: 0.35em;
-      text-transform: uppercase; color: var(--accent-light);
-      margin-bottom: 0.5rem; font-style: italic;
-    }
-    header h1 {
-      font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 700;
-      letter-spacing: 0.03em; line-height: 1.1;
-      text-shadow: 0 2px 6px rgba(0,0,0,0.3);
-    }
-    .header-sub {
-      margin-top: 0.6rem; font-style: italic;
-      color: rgba(253,247,236,0.75); font-size: 1rem;
-    }
-    .header-rule {
-      width: 120px; height: 2px; background: var(--accent-light);
-      margin: 1rem auto 0; border-radius: 2px; opacity: 0.6;
-    }
+/* ── HEADER ── */
+header {
+  background: linear-gradient(160deg, var(--accent-dim) 0%, var(--accent) 60%, var(--accent-mid) 100%);
+  color: #fdf7ec;
+  text-align: center;
+  padding: 2.5rem 1.5rem 2rem;
+  position: relative; overflow: hidden;
+  border-bottom: 3px solid var(--accent-dim);
+}
+header::before {
+  content: ''; position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  pointer-events: none;
+}
+.header-ornament {
+  font-size: 1.1rem; letter-spacing: 0.35em;
+  text-transform: uppercase; color: var(--accent-light);
+  margin-bottom: 0.5rem; font-style: italic;
+}
+header h1 {
+  font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 700;
+  letter-spacing: 0.03em; line-height: 1.1;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+.header-sub {
+  margin-top: 0.6rem; font-style: italic;
+  color: rgba(253,247,236,0.75); font-size: 1rem;
+}
+.header-rule {
+  width: 120px; height: 2px; background: var(--accent-light);
+  margin: 1rem auto 0; border-radius: 2px; opacity: 0.6;
+}
 
-    /* ── SEARCH ── */
-    .search-wrap { max-width: 680px; margin: 2rem auto 0.5rem; padding: 0 1.5rem; }
-    .search-inner { position: relative; display: flex; align-items: center; }
-    .search-icon {
-      position: absolute; left: 1rem; top: 50%; transform: translateY(-50%);
-      width: 18px; height: 18px; color: var(--accent); pointer-events: none;
-    }
-    #search {
-      width: 100%; padding: 0.85rem 1rem 0.85rem 3rem;
-      font-family: 'Caudex', serif; font-size: 1rem;
-      border: 2px solid var(--border); border-radius: 8px;
-      background: var(--card-bg); color: var(--text);
-      transition: border-color 0.2s, box-shadow 0.2s; outline: none;
-    }
-    #search:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(139,105,20,0.15); }
-    #search::placeholder { color: #a08840; font-style: italic; }
+/* ── SEARCH ── */
+.search-wrap { max-width: 680px; margin: 2rem auto 0.5rem; padding: 0 1.5rem; }
+.search-inner { position: relative; display: flex; align-items: center; }
+.search-icon {
+  position: absolute; left: 1rem; top: 50%; transform: translateY(-50%);
+  width: 18px; height: 18px; color: var(--accent); pointer-events: none;
+}
+#search {
+  width: 100%; padding: 0.85rem 1rem 0.85rem 3rem;
+  font-family: 'Caudex', serif; font-size: 1rem;
+  border: 2px solid var(--border); border-radius: 8px;
+  background: var(--card-bg); color: var(--text);
+  transition: border-color 0.2s, box-shadow 0.2s; outline: none;
+}
+#search:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(139,105,20,0.15); }
+#search::placeholder { color: #a08840; font-style: italic; }
 
-    .results-bar {
-      max-width: 1320px; margin: 0.75rem auto 0; padding: 0 1.5rem;
-      display: flex; align-items: center; justify-content: space-between;
-      flex-wrap: wrap; gap: 0.5rem;
-    }
-    #count { font-size: 0.85rem; color: var(--text-soft); font-style: italic; }
+.results-bar {
+  max-width: 1320px; margin: 0.75rem auto 0; padding: 0 1.5rem;
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 0.5rem;
+}
+#count { font-size: 0.85rem; color: var(--text-soft); font-style: italic; }
 
-    /* ── TAGS ── */
-    .tag {
-      display: inline-block; font-size: 0.68rem; font-family: 'Caudex', serif;
-      padding: 0.15em 0.6em; border-radius: 3px;
-      letter-spacing: 0.04em; font-weight: 700; white-space: nowrap;
-    }
-    .tag-guild { background: var(--tag-guild-bg); color: var(--tag-guild); border: 1px solid #a8c898; }
-    .tag-loc   { background: var(--tag-loc-bg);   color: var(--tag-loc);   border: 1px solid #c098d4; }
+/* ── TAGS ── */
+.tag {
+  display: inline-block; font-size: 0.68rem; font-family: 'Caudex', serif;
+  padding: 0.15em 0.6em; border-radius: 3px;
+  letter-spacing: 0.04em; font-weight: 700; white-space: nowrap;
+}
+.tag-guild { background: var(--tag-guild-bg); color: var(--tag-guild); border: 1px solid #a8c898; }
+.tag-loc   { background: var(--tag-loc-bg);   color: var(--tag-loc);   border: 1px solid #c098d4; }
 
-    /* ── GRID ── */
-    .npc-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-      gap: 1.5rem;
-      padding: 1.5rem 1.5rem 3rem;
-      max-width: 1320px; margin: 0 auto;
-    }
+/* ── GRID ── */
+.npc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.5rem;
+  padding: 1.5rem 1.5rem 3rem;
+  max-width: 1320px; margin: 0 auto;
+}
 
-    /* ── CARD — Baseball card style ── */
-    .npc-card {
-      background: var(--card-bg);
-      border: 1px solid var(--border-soft);
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 2px 10px var(--shadow);
-      display: flex; flex-direction: column;
-      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
-    }
-    .npc-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 24px rgba(90,60,10,0.2);
-      border-color: var(--border);
-    }
+/* ── CARD ── */
+.npc-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-soft);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px var(--shadow);
+  display: flex; flex-direction: column;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+.npc-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(90,60,10,0.2);
+  border-color: var(--border);
+}
 
-    /* Large image area at top — square-ish like a baseball card */
-    .card-image {
-      width: 100%;
-      aspect-ratio: 1 / 1;
-      position: relative;
-      overflow: hidden;
-      background: var(--card-placeholder-bg, #c8a85a);
-      flex-shrink: 0;
-    }
-    .card-image img {
-      width: 100%; height: 100%;
-      object-fit: cover; object-position: top center;
-      display: block;
-    }
-    /* Placeholder when no image — large initials on gradient */
-    .card-image-placeholder {
-      width: 100%; height: 100%;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 4rem; font-weight: 700; color: rgba(255,255,255,0.9);
-      text-shadow: 0 2px 8px rgba(0,0,0,0.35);
-      letter-spacing: 0.05em;
-    }
-    /* Thin gold bar at very bottom of image area */
-    .card-image::after {
-      content: '';
-      position: absolute; bottom: 0; left: 0; right: 0;
-      height: 4px;
-      background: var(--accent-mid);
-    }
+.card-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+.card-image img {
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: top center;
+  display: block;
+  transition: transform 0.25s ease;
+}
+.card-image:hover img { transform: scale(1.04); }
 
-    /* Card body below the image */
-    .card-body {
-      padding: 0.9rem 1rem 1rem;
-      display: flex; flex-direction: column; gap: 0.4rem;
-      flex: 1;
-    }
-    .npc-name {
-      font-size: 1.15rem; font-weight: 700;
-      color: var(--accent-dim); line-height: 1.2;
-    }
-    .npc-subtitle {
-      font-size: 0.95rem; color: var(--text-soft);
-      font-style: italic; line-height: 1.35;
-    }
-    .card-tags { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-top: 0.1rem; }
-    .card-desc {
-      margin-top: 0.5rem; font-size: 0.95rem;
-      color: var(--text); line-height: 1.65;
-      border-top: 1px solid var(--border-soft);
-      padding-top: 0.6rem;
-    }
+.card-image-placeholder {
+  width: 100%; height: 100%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 4rem; font-weight: 700; color: rgba(255,255,255,0.9);
+  text-shadow: 0 2px 8px rgba(0,0,0,0.35);
+  letter-spacing: 0.05em;
+}
 
-    /* Alpha dividers sit outside grid flow */
-    .alpha-divider-wrap {
-      display: contents;
-    }
-    .alpha-divider {
-      grid-column: 1 / -1;
-      display: flex; align-items: center; gap: 1rem;
-      margin: 0.4rem 0 -0.2rem;
-    }
-    .alpha-divider span {
-      font-size: 1.4rem; font-weight: 700;
-      color: var(--accent); flex-shrink: 0; line-height: 1;
-    }
-    .alpha-divider::after { content: ''; flex: 1; height: 1px; background: var(--border-soft); }
+.card-image::after {
+  content: '';
+  position: absolute; bottom: 0; left: 0; right: 0;
+  height: 4px;
+  background: var(--accent-mid);
+}
 
-    /* ── EMPTY STATE ── */
-    .empty-state {
-      grid-column: 1 / -1; text-align: center;
-      padding: 4rem 2rem; color: var(--text-soft);
-    }
-    .empty-state h3 { font-size: 1.3rem; margin-bottom: 0.5rem; }
-    .empty-state p  { font-style: italic; font-size: 0.95rem; line-height: 1.6; }
-    .empty-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+/* Zoom hint on hover */
+.card-image::before {
+  content: '⤢';
+  position: absolute; top: 0.5rem; right: 0.6rem;
+  font-size: 1.1rem; color: rgba(255,255,255,0.85);
+  text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+  opacity: 0;
+  transition: opacity 0.2s;
+  z-index: 1;
+  pointer-events: none;
+}
+.card-image:hover::before { opacity: 1; }
 
-    footer {
-      text-align: center; padding: 1.5rem;
-      font-style: italic; font-size: 0.85rem;
-      color: var(--text-soft); border-top: 1px solid var(--border-soft);
-    }
+.card-body {
+  padding: 0.9rem 1rem 1rem;
+  display: flex; flex-direction: column; gap: 0.4rem;
+  flex: 1;
+}
+.npc-name {
+  font-size: 1.15rem; font-weight: 700;
+  color: var(--accent-dim); line-height: 1.2;
+}
+.npc-subtitle {
+  font-size: 0.95rem; color: var(--text-soft);
+  font-style: italic; line-height: 1.35;
+}
+.card-tags { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-top: 0.1rem; }
+.card-desc {
+  margin-top: 0.5rem; font-size: 0.95rem;
+  color: var(--text); line-height: 1.65;
+  border-top: 1px solid var(--border-soft);
+  padding-top: 0.6rem;
+}
 
-    @media (max-width: 480px) {
-      .npc-grid { grid-template-columns: 1fr; padding: 1rem; gap: 1rem; }
-      header { padding: 1.8rem 1rem 1.5rem; }
-    }
-  </style>
+/* ── ALPHA DIVIDERS ── */
+.alpha-divider-wrap { display: contents; }
+.alpha-divider {
+  grid-column: 1 / -1;
+  display: flex; align-items: center; gap: 1rem;
+  margin: 0.4rem 0 -0.2rem;
+}
+.alpha-divider span {
+  font-size: 1.4rem; font-weight: 700;
+  color: var(--accent); flex-shrink: 0; line-height: 1;
+}
+.alpha-divider::after { content: ''; flex: 1; height: 1px; background: var(--border-soft); }
+
+/* ── EMPTY STATE ── */
+.empty-state {
+  grid-column: 1 / -1; text-align: center;
+  padding: 4rem 2rem; color: var(--text-soft);
+}
+.empty-state h3 { font-size: 1.3rem; margin-bottom: 0.5rem; }
+.empty-state p  { font-style: italic; font-size: 0.95rem; line-height: 1.6; }
+.empty-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+
+/* ── IMAGE MODAL ── */
+.modal-backdrop {
+  display: none;
+  position: fixed; inset: 0; z-index: 1000;
+  background: rgba(20, 12, 4, 0.88);
+  backdrop-filter: blur(4px);
+  align-items: center; justify-content: center;
+  padding: 1.5rem;
+  cursor: pointer;
+}
+.modal-backdrop.open { display: flex; }
+
+.modal-content {
+  position: relative;
+  max-width: min(88vw, 680px);
+  max-height: 92vh;
+  display: flex; flex-direction: column; align-items: center;
+  gap: 1rem;
+  cursor: default;
+  animation: modalIn 0.2s ease;
+}
+@keyframes modalIn {
+  from { opacity: 0; transform: scale(0.94); }
+  to   { opacity: 1; transform: scale(1); }
+}
+.modal-content img {
+  max-width: 100%;
+  max-height: 78vh;
+  object-fit: contain;
+  border-radius: 8px;
+  border: 3px solid var(--accent-mid);
+  box-shadow: 0 12px 48px rgba(0,0,0,0.6);
+  display: block;
+}
+.modal-name {
+  font-family: 'Caudex', serif;
+  font-size: 1.3rem; font-weight: 700;
+  color: var(--accent-light);
+  text-align: center;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.5);
+}
+.modal-close {
+  position: absolute; top: -0.75rem; right: -0.75rem;
+  width: 2rem; height: 2rem; border-radius: 50%;
+  background: var(--accent-mid); border: 2px solid var(--accent-light);
+  color: #fff; font-size: 1rem; line-height: 1;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; font-family: sans-serif;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  transition: background 0.15s;
+}
+.modal-close:hover { background: var(--accent-dim); }
+
+footer {
+  text-align: center; padding: 1.5rem;
+  font-style: italic; font-size: 0.85rem;
+  color: var(--text-soft); border-top: 1px solid var(--border-soft);
+}
+
+@media (max-width: 480px) {
+  .npc-grid { grid-template-columns: 1fr; padding: 1rem; gap: 1rem; }
+  header { padding: 1.8rem 1rem 1.5rem; }
+}
+</style>
 </head>
 <body>
 
@@ -242,19 +306,21 @@
 
 <div class="npc-grid" id="npcGrid"></div>
 
+<!-- Image modal -->
+<div class="modal-backdrop" id="modalBackdrop">
+  <div class="modal-content" id="modalContent">
+    <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
+    <img id="modalImg" src="" alt="">
+    <div class="modal-name" id="modalName"></div>
+  </div>
+</div>
+
 <footer>
   <em>"Someone has to do it. Statistically, that someone is you."</em>
   &nbsp;—&nbsp; Aldric Fumblestaff, INTERNS Liaison Officer
 </footer>
 
 <script>
-// ─────────────────────────────────────────────────────────────────────────────
-//  NPC DATA
-//  metByPlayers: true  = shows on this page
-//  metByPlayers: false = hidden until the party meets them
-//  image: path relative to index.html, e.g. "images/aldric-fumblestaff.png"
-//         Leave as "" to show large initials placeholder instead.
-// ─────────────────────────────────────────────────────────────────────────────
 const NPC_DATA = [
   {
     name: "Aldric Fumblestaff",
@@ -268,22 +334,15 @@ const NPC_DATA = [
   },
   {
     name: "Birka Snowmantle",
-    subtitle: "",
-    role: "",
-    location: "",
-    guildMember: false,
-    metByPlayers: false,
-    description: "",
-    image: ""
+    subtitle: "", role: "", location: "",
+    guildMember: false, metByPlayers: false, description: "", image: ""
   },
   {
     name: "Bobo",
     subtitle: "Baboon",
     role: "Performing Baboon, The Dark Horse Theatre",
     location: "",
-    guildMember: false,
-    metByPlayers: true,
-    description: "",
+    guildMember: false, metByPlayers: true, description: "",
     image: "images/Bobo.png"
   },
   {
@@ -291,8 +350,7 @@ const NPC_DATA = [
     subtitle: "Cat",
     role: "Resident Cat, Frowshief's Fineries",
     location: "Midanthis",
-    guildMember: false,
-    metByPlayers: true,
+    guildMember: false, metByPlayers: true,
     description: "The resident cat at Frowshief's Fineries. Fat, ginger, green-eyed, and entirely unbothered by whatever is happening around her.",
     image: "images/Buttons.png"
   },
@@ -301,8 +359,7 @@ const NPC_DATA = [
     subtitle: "Half-Orc · Ranger",
     role: "Guild Operative, Mkali Peaks",
     location: "",
-    guildMember: true,
-    metByPlayers: false,
+    guildMember: true, metByPlayers: false,
     description: "Quiet, methodical, and genuinely unbothered by the volcanic activity surrounding his post. He has survived worse, and will tell you so if pressed — once you've managed to get him talking, which takes a while.",
     image: "images/caelum-ashward.png"
   },
@@ -311,8 +368,7 @@ const NPC_DATA = [
     subtitle: "Torttle · Ranger",
     role: "Guild Scout, Umida Hall",
     location: "Kupika Desert",
-    guildMember: true,
-    metByPlayers: false,
+    guildMember: true, metByPlayers: false,
     description: "A slow-speaking, deeply observant scout who knows every water source, shortcut, and terrible idea between here and the dunes. He delivers information at his own pace. The pace is deliberate. The information is always correct.",
     image: "images/copperjaw-dun.png"
   },
@@ -321,8 +377,7 @@ const NPC_DATA = [
     subtitle: "High Elf · Bard",
     role: "INTERNS Programme Supervisor, HERO Guild",
     location: "Midanthis",
-    guildMember: true,
-    metByPlayers: true,
+    guildMember: true, metByPlayers: true,
     description: "A woman of such refined bearing that simply being looked at by her makes you want to apologise for your posture. She has trained diplomats, councillors, and at least one minor royal, and regards the INTERNS programme as her most ambitious charitable undertaking to date.",
     image: "images/Cordelia.png"
   },
@@ -331,8 +386,7 @@ const NPC_DATA = [
     subtitle: "Dwarf · Rogue",
     role: "Guild Intelligence, HERO Guild",
     location: "Midanthis",
-    guildMember: true,
-    metByPlayers: true,
+    guildMember: true, metByPlayers: true,
     description: "A broad, beaming, extravagantly bearded woman who greets everyone like a long-lost friend and tells stories with her whole body. She once spent three weeks embedded in a foreign court entirely because everyone assumed someone that cheerful couldn't possibly be paying attention.",
     image: "images/Dagna.png"
   },
@@ -341,8 +395,7 @@ const NPC_DATA = [
     subtitle: "Elf",
     role: "Co-owners, Frowshief's Fineries",
     location: "",
-    guildMember: false,
-    metByPlayers: true,
+    guildMember: false, metByPlayers: true,
     description: "Flamboyant Felicity is an expert dressmaker and designer; fastidious Felix is a fine artisan jeweller. Between them, they can outfit anyone for any occasion — though Felix does have strong opinions about button placement.",
     image: "images/Frowshiefs.png"
   },
@@ -351,8 +404,7 @@ const NPC_DATA = [
     subtitle: "Halfling · Barbarian",
     role: "INTERNS Trainer, HERO Guild",
     location: "Midanthis",
-    guildMember: true,
-    metByPlayers: true,
+    guildMember: true, metByPlayers: true,
     description: "An extremely small man who has heard every joke about his size, is completely unbothered by all of them, and whose response to any expression of doubt about his qualifications is to simply pick up whatever is nearest and wait for the conversation to move on. It always does.",
     image: "images/Fenwick.png"
   },
@@ -361,28 +413,21 @@ const NPC_DATA = [
     subtitle: "Kenku · Wizard",
     role: "Guild Archivist, HERO Guild",
     location: "Midanthis",
-    guildMember: true,
-    metByPlayers: false,
+    guildMember: true, metByPlayers: false,
     description: "A quietly watchful crow-person who speaks only in sounds and phrases collected from years of archival work — meaning all guidance arrives as a patchwork of previous researchers' voices. Disorienting until you realise it is also extremely accurate. The archive is his domain. He has a three-token question system and is not negotiating.",
     image: "images/Grimoire.png"
   },
   {
     name: "Halvar Grimkin",
-    subtitle: "",
-    role: "",
-    location: "",
-    guildMember: false,
-    metByPlayers: false,
-    description: "",
-    image: ""
+    subtitle: "", role: "", location: "",
+    guildMember: false, metByPlayers: false, description: "", image: ""
   },
   {
     name: "Leyla Peridot",
     subtitle: "Sprite",
     role: "Leader of the Sprites",
     location: "",
-    guildMember: false,
-    metByPlayers: true,
+    guildMember: false, metByPlayers: true,
     description: "Leyla leads the Sprites and often makes scouting runs to gather tiny decorating supplies. She has the energy of someone who finds everything interesting and the focus of someone who very much has a plan.",
     image: "images/Leyla.png"
   },
@@ -391,8 +436,7 @@ const NPC_DATA = [
     subtitle: "Blink Dog · Fey",
     role: "INTERNS Trainer, HERO Guild",
     location: "Midanthis",
-    guildMember: true,
-    metByPlayers: true,
+    guildMember: true, metByPlayers: true,
     description: "A large, silver-patched blink dog who appears and disappears mid-sentence with the cheerful unpredictability of someone who has never once considered that this might be disorienting for others. Her entire teaching philosophy is based on the principle that the best way to learn something is to be chased by someone who already can do it.",
     image: "images/Moth.png"
   },
@@ -401,8 +445,7 @@ const NPC_DATA = [
     subtitle: "Ghost · Former Child",
     role: "INTERNS Stealth Trainer, HERO Guild",
     location: "Midanthis",
-    guildMember: true,
-    metByPlayers: true,
+    guildMember: true, metByPlayers: true,
     description: "A small, faintly glowing child of completely unknown historical origin who has haunted the Guild Hall since before anyone currently employed was born. She finds the whole business of stealth training genuinely delightful, and is — despite appearances — the most technically accomplished hider anyone in the Guild has ever encountered.",
     image: "images/Nill.png"
   },
@@ -411,8 +454,7 @@ const NPC_DATA = [
     subtitle: "Awakened Tortoise",
     role: "Guild Cook, HERO Guild",
     location: "Midanthis",
-    guildMember: true,
-    metByPlayers: true,
+    guildMember: true, metByPlayers: true,
     description: "A legendarily ancient tortoise who has been the Guild's cook since before anyone can remember. He moves at a pace that makes you question whether the stew will be ready before you die of old age, but his meals have kept adventurers alive through things that probably should have killed them.",
     image: "images/Ol-Crackers.png"
   },
@@ -421,8 +463,7 @@ const NPC_DATA = [
     subtitle: "Sea Elf · Fighter",
     role: "Community Liaison, Fantasian Ocean",
     location: "",
-    guildMember: true,
-    metByPlayers: false,
+    guildMember: true, metByPlayers: false,
     description: "A former naval officer who retired from the fleet, joined the Guild, and has since had considerably more fun. He knows the coastal waters better than anyone — and is quietly delighted to be doing something about what he finds there.",
     image: "images/osric-floodmark.png"
   },
@@ -431,8 +472,7 @@ const NPC_DATA = [
     subtitle: "Half-Elf",
     role: "Theatre Manager, The Dark Horse Theatre",
     location: "Midanthis",
-    guildMember: false,
-    metByPlayers: true,
+    guildMember: false, metByPlayers: true,
     description: "The manager of The Dark Horse Theatre — portly, magnificent in bearing, and possessed of the particular confidence that comes from having convinced an audience of absolutely anything on more than one occasion.",
     image: "images/Paolo.png"
   },
@@ -441,8 +481,7 @@ const NPC_DATA = [
     subtitle: "Human · Monk",
     role: "Lost Property Office, HERO Guild",
     location: "Midanthis",
-    guildMember: true,
-    metByPlayers: true,
+    guildMember: true, metByPlayers: true,
     description: "A tiny, serene grandmother who runs the Guild's lost property office as her primary role. She has never once mentioned her fighting career — unless you count the framed championship belts she uses as tea trays. Nobody counts them, because everyone is afraid to.",
     image: "images/Perpetua.png"
   },
@@ -451,8 +490,7 @@ const NPC_DATA = [
     subtitle: "Human · Acolyte",
     role: "",
     location: "Mellow Valley",
-    guildMember: false,
-    metByPlayers: true,
+    guildMember: false, metByPlayers: true,
     description: "A hiker captured by gnolls three days before the party found him, with limited healing abilities and bruises that tell a clear story. Quiet, grateful, and very ready to leave.",
     image: "images/Rodree.png"
   },
@@ -461,8 +499,7 @@ const NPC_DATA = [
     subtitle: "Gnome",
     role: "Usher & Paulo's Right Hand, The Dark Horse Theatre",
     location: "Midanthis",
-    guildMember: false,
-    metByPlayers: true,
+    guildMember: false, metByPlayers: true,
     description: "A tiny elderly gnome in a grey uniform who runs the front-of-house operation at The Dark Horse Theatre with an efficiency that the rest of the building is still trying to catch up to.",
     image: "images/Sedge.png"
   },
@@ -471,8 +508,7 @@ const NPC_DATA = [
     subtitle: "Air Genasi · Monk",
     role: "Guild Operative, Jabali Tundra",
     location: "Jabali Tundra",
-    guildMember: true,
-    metByPlayers: false,
+    guildMember: true, metByPlayers: false,
     description: "Walks the entire Tundra circuit twice a year regardless of weather, which the locals find either inspiring or deeply suspicious depending on the month. She considers this a reasonable interpretation of her job description.",
     image: "images/senna.png"
   },
@@ -481,38 +517,30 @@ const NPC_DATA = [
     subtitle: "Dwarf · Fighter",
     role: "Guild Veteran, Grim Expanse",
     location: "Grim Expanse",
-    guildMember: true,
-    metByPlayers: false,
+    guildMember: true, metByPlayers: false,
     description: "Retired from the war that left the Grim Expanse its name, and stayed on to make sure nobody forgets why it's called that. She is the reason several bad ideas have remained ideas.",
     image: "images/edda-flint.png"
   },
   {
     name: "The Azimuth (Zimmy)",
     subtitle: "Ancient Entity · Celestial",
-    role: "Elowen's Warlock Patron",
+    role: "Elowyn's Warlock Patron",
     location: "",
-    guildMember: false,
-    metByPlayers: true,
+    guildMember: false, metByPlayers: true,
     description: "An ancient navigation entity, once vast and all-seeing, now rebuilding its power through its bond with Elowyn. It has taken up residence in the gem of her staff. At seven, Elowyn wandered into a restricted library section and said hello to an empty room. The room said hello back. She called it Zimmy. It has never once pointed her the wrong way.",
     image: "images/Zimmy.png"
   },
   {
     name: "Vessel Jorn",
-    subtitle: "",
-    role: "",
-    location: "",
-    guildMember: false,
-    metByPlayers: false,
-    description: "",
-    image: ""
+    subtitle: "", role: "", location: "",
+    guildMember: false, metByPlayers: false, description: "", image: ""
   },
   {
     name: "Vesper",
     subtitle: "Tabaxi · Wizard",
     role: "Senior Archivist, HERO Guild",
     location: "Midanthis",
-    guildMember: true,
-    metByPlayers: true,
+    guildMember: true, metByPlayers: true,
     description: "A sleek, silver-furred cat-person of mercurial focus who can locate any document in the archive within thirty seconds and then become completely distracted by an unrelated one for forty-five minutes. Her knowledge is genuinely encyclopaedic, if you can keep her attention long enough to access it.",
     image: "images/Vesper.png"
   },
@@ -521,8 +549,7 @@ const NPC_DATA = [
     subtitle: "Tiefling · Warlock",
     role: "Community Liaison, Mkali Peaks & Grim Expanse",
     location: "Grim Expanse",
-    guildMember: true,
-    metByPlayers: false,
+    guildMember: true, metByPlayers: false,
     description: "Has an unsettlingly good relationship with the things that live in the Grim Expanse, which the Guild finds occasionally useful and mostly worrying. She does not explain how she got them to cooperate. Nobody has pushed.",
     image: "images/vex-morrain.png"
   },
@@ -531,26 +558,18 @@ const NPC_DATA = [
     subtitle: "Elf · Druid",
     role: "Proprietor, Mosscroft's (Mostly) Miraculous Mixtures",
     location: "Mellow Valley",
-    guildMember: false,
-    metByPlayers: true,
+    guildMember: false, metByPlayers: true,
     description: "Hazel Picklebrine's oldest friend, with a dry wit and very little patience for mystical framing. She runs a small, formidably well-stocked apothecary and will send you away with six herbal preparations you didn't ask for and very firm instructions you won't follow.",
     image: "images/Winifred.png"
   },
   {
     name: "Zahra Emberveil",
-    subtitle: "",
-    role: "",
-    location: "",
-    guildMember: false,
-    metByPlayers: false,
-    description: "",
-    image: ""
+    subtitle: "", role: "", location: "",
+    guildMember: false, metByPlayers: false, description: "", image: ""
   }
 ];
 
-// ─────────────────────────────────────────────────────────────────────────────
-//  AVATAR COLOURS — deterministic per character name
-// ─────────────────────────────────────────────────────────────────────────────
+// ── AVATAR COLOURS ──
 const PALETTE = [
   ["#5c3d2e","#a0522d"],["#1e3a5f","#2e6da4"],["#2d4a1e","#4a7c3f"],
   ["#4a2a5c","#7a4a9c"],["#5c2a1e","#9c4a3e"],["#1e4a4a","#3e8a8a"],
@@ -569,9 +588,35 @@ function initials(name) {
     : name.slice(0, 2).toUpperCase();
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
-//  RENDER
-// ─────────────────────────────────────────────────────────────────────────────
+// ── MODAL ──
+const backdrop = document.getElementById('modalBackdrop');
+const modalImg  = document.getElementById('modalImg');
+const modalName = document.getElementById('modalName');
+
+function openModal(src, name) {
+  modalImg.src  = src;
+  modalImg.alt  = name;
+  modalName.textContent = name;
+  backdrop.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeModal() {
+  backdrop.classList.remove('open');
+  document.body.style.overflow = '';
+  setTimeout(() => { modalImg.src = ''; }, 200);
+}
+
+document.getElementById('modalClose').addEventListener('click', e => {
+  e.stopPropagation(); closeModal();
+});
+backdrop.addEventListener('click', e => {
+  if (e.target === backdrop) closeModal();
+});
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeModal();
+});
+
+// ── RENDER ──
 const grid   = document.getElementById('npcGrid');
 const search = document.getElementById('search');
 const count  = document.getElementById('count');
@@ -588,19 +633,18 @@ MET.forEach(n => {
 function buildCard(npc) {
   const [dark, mid] = avatarColors(npc.name);
   const inits = initials(npc.name);
+  const placeholder = 'linear-gradient(160deg,#4a2a5c,#7a4a9c)';
 
   const tags = [];
   if (npc.guildMember) tags.push(`<span class="tag tag-guild">Guild Member</span>`);
   if (npc.location)    tags.push(`<span class="tag tag-loc">${npc.location}</span>`);
 
-  // Large image panel — consistent deep purple placeholder for all cards
-  const placeholder = 'linear-gradient(160deg,#4a2a5c,#7a4a9c)';
   let imageHtml;
   if (npc.image) {
     imageHtml = `
-      <div class="card-image" id="img-${npc.name.replace(/\W/g,'_')}">
+      <div class="card-image" data-src="${npc.image}" data-name="${npc.name}">
         <img src="${npc.image}" alt="${npc.name}"
-          onerror="var p=this.parentNode; p.style.background='${placeholder}'; p.innerHTML='<div class=\\'card-image-placeholder\\'>${inits}</div>';">
+          onerror="var p=this.parentNode; p.style.background='${placeholder}'; p.removeAttribute('data-src'); p.innerHTML='<div class=\\'card-image-placeholder\\'>${inits}</div>';">
       </div>`;
   } else {
     imageHtml = `
@@ -610,7 +654,7 @@ function buildCard(npc) {
   }
 
   const subtitleLine = [npc.subtitle, npc.role].filter(Boolean).join(' · ');
-  const descBlock = npc.description
+  const descBlock    = npc.description
     ? `<div class="card-desc">${npc.description}</div>` : '';
 
   return `
@@ -625,6 +669,12 @@ function buildCard(npc) {
   </div>`;
 }
 
+// Delegate click handling for card images
+grid.addEventListener('click', e => {
+  const img = e.target.closest('.card-image[data-src]');
+  if (img) openModal(img.dataset.src, img.dataset.name);
+});
+
 function render(query) {
   const q = query.toLowerCase().trim();
   grid.innerHTML = '';
@@ -638,8 +688,7 @@ function render(query) {
         <p>The ledger is empty — but not for long.<br>
            Characters will appear here as the party encounters them.</p>
       </div>`;
-    count.textContent = '';
-    return;
+    count.textContent = ''; return;
   }
   if (visible.length === 0) {
     grid.innerHTML = `
@@ -648,8 +697,7 @@ function render(query) {
         <h3>No one found.</h3>
         <p>Try a different name or location —<br>they may be using an alias.</p>
       </div>`;
-    count.textContent = 'No results.';
-    return;
+    count.textContent = 'No results.'; return;
   }
 
   let lastLetter = '';
