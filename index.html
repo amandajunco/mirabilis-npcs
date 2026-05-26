@@ -341,7 +341,7 @@ const NPC_DATA = [
     name: "Bobo",
     subtitle: "Baboon",
     role: "Performing Baboon, The Dark Horse Theatre",
-    location: "",
+    location: "Midanthis",
     guildMember: false, metByPlayers: true, description: "",
     image: "images/Bobo.png"
   },
@@ -703,11 +703,11 @@ function render(query) {
   let lastLetter = '';
   visible.forEach(npc => {
     const letter = npc.name[0].toUpperCase();
-    if (!q && letter !== lastLetter) {
-      grid.insertAdjacentHTML('beforeend',
-        `<div class="alpha-divider-wrap"><div class="alpha-divider"><span>${letter}</span></div></div>`);
-      lastLetter = letter;
-    }
+    // if (!q && letter !== lastLetter) {
+    //   grid.insertAdjacentHTML('beforeend',
+    //     `<div class="alpha-divider-wrap"><div class="alpha-divider"><span>${letter}</span></div></div>`);
+    //   lastLetter = letter;
+    // }
     grid.insertAdjacentHTML('beforeend', buildCard(npc));
   });
 
