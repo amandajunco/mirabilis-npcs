@@ -329,7 +329,7 @@ const NPC_DATA = [
   {
     name: "Aldric Fumblestaff",
     subtitle: "Human · Wizard",
-    role: "INTERNS Liaison Officer, HERO Guild",
+    role: "INTERNS Liaison Officer, Guild Headquarters",
     location: "Midanthis",
     guildMember: true,
     metByPlayers: true,
@@ -379,7 +379,7 @@ const NPC_DATA = [
   {
     name: "Cordelia Finch-Prentiss",
     subtitle: "High Elf · Bard",
-    role: "INTERNS Programme Supervisor, HERO Guild",
+    role: "Diplomatic & Social Arts, Guild Headquarters",
     location: "Midanthis",
     guildMember: true, metByPlayers: true,
     description: "A woman of such refined bearing that simply being looked at by her makes you want to apologise for your posture. She has trained diplomats, councillors, and at least one minor royal, and regards the INTERNS programme as her most ambitious charitable undertaking to date.",
@@ -388,7 +388,7 @@ const NPC_DATA = [
   {
     name: "Dagma Rolt",
     subtitle: "Dwarf · Rogue",
-    role: "Guild Intelligence, HERO Guild",
+    role: "Guild Intelligence Consultant, Guild Headquarters",
     location: "Midanthis",
     guildMember: true, metByPlayers: true,
     description: "A broad, beaming, extravagantly bearded woman who greets everyone like a long-lost friend and tells stories with her whole body. She once spent three weeks embedded in a foreign court entirely because everyone assumed someone that cheerful couldn't possibly be paying attention.",
@@ -398,7 +398,7 @@ const NPC_DATA = [
     name: "Felicity & Felix Frowshief",
     subtitle: "Elf",
     role: "Co-owners, Frowshief's Fineries",
-    location: "",
+    location: "Midanthis",
     guildMember: false, metByPlayers: true,
     description: "Flamboyant Felicity is an expert dressmaker and designer; fastidious Felix is a fine artisan jeweller. Between them, they can outfit anyone for any occasion — though Felix does have strong opinions about button placement.",
     image: "images/Frowshiefs.png"
@@ -406,7 +406,7 @@ const NPC_DATA = [
   {
     name: "Fenwick",
     subtitle: "Halfling · Barbarian",
-    role: "INTERNS Trainer, HERO Guild",
+    role: "Strength & Athletics, Guild Headquarters",
     location: "Midanthis",
     guildMember: true, metByPlayers: true,
     description: "An extremely small man who has heard every joke about his size, is completely unbothered by all of them, and whose response to any expression of doubt about his qualifications is to simply pick up whatever is nearest and wait for the conversation to move on. It always does.",
@@ -415,7 +415,7 @@ const NPC_DATA = [
   {
     name: "Grimoire",
     subtitle: "Kenku · Wizard",
-    role: "Guild Archivist, HERO Guild",
+    role: "Guild Archivist, Guild Headquarters",
     location: "Midanthis",
     guildMember: true, metByPlayers: false,
     description: "A quietly watchful crow-person who speaks only in sounds and phrases collected from years of archival work — meaning all guidance arrives as a patchwork of previous researchers' voices. Disorienting until you realise it is also extremely accurate. The archive is his domain. He has a three-token question system and is not negotiating.",
@@ -429,7 +429,7 @@ const NPC_DATA = [
   {
     name: "Leyla Peridot",
     subtitle: "Sprite",
-    role: "Leader of the Sprites",
+    role: "Leader of the Sprites, Frowshief's Fineries",
     location: "",
     guildMember: false, metByPlayers: true,
     description: "Leyla leads the Sprites and often makes scouting runs to gather tiny decorating supplies. She has the energy of someone who finds everything interesting and the focus of someone who very much has a plan.",
@@ -438,7 +438,7 @@ const NPC_DATA = [
   {
     name: "Moth",
     subtitle: "Blink Dog · Fey",
-    role: "INTERNS Trainer, HERO Guild",
+    role: "INTERNS Trainer, Guild Headquarters",
     location: "Midanthis",
     guildMember: true, metByPlayers: true,
     description: "A large, silver-patched blink dog who appears and disappears mid-sentence with the cheerful unpredictability of someone who has never once considered that this might be disorienting for others. Her entire teaching philosophy is based on the principle that the best way to learn something is to be chased by someone who already can do it.",
@@ -447,7 +447,7 @@ const NPC_DATA = [
   {
     name: "Nill",
     subtitle: "Ghost · Former Child",
-    role: "INTERNS Stealth Trainer, HERO Guild",
+    role: "Resident Ghost, Guild Headquarters",
     location: "Midanthis",
     guildMember: true, metByPlayers: true,
     description: "A small, faintly glowing child of completely unknown historical origin who has haunted the Guild Hall since before anyone currently employed was born. She finds the whole business of stealth training genuinely delightful, and is — despite appearances — the most technically accomplished hider anyone in the Guild has ever encountered.",
@@ -456,7 +456,7 @@ const NPC_DATA = [
   {
     name: "Ol' Crackers",
     subtitle: "Awakened Tortoise",
-    role: "Guild Cook, HERO Guild",
+    role: "Guild Cook, Guild Headquarters",
     location: "Midanthis",
     guildMember: true, metByPlayers: true,
     description: "A legendarily ancient tortoise who has been the Guild's cook since before anyone can remember. He moves at a pace that makes you question whether the stew will be ready before you die of old age, but his meals have kept adventurers alive through things that probably should have killed them.",
@@ -483,7 +483,7 @@ const NPC_DATA = [
   {
     name: "Perpetua Gong",
     subtitle: "Human · Monk",
-    role: "Lost Property Office, HERO Guild",
+    role: "Lost Property & Combat Assessment, Guild Headquarters",
     location: "Midanthis",
     guildMember: true, metByPlayers: true,
     description: "A tiny, serene grandmother who runs the Guild's lost property office as her primary role. She has never once mentioned her fighting career — unless you count the framed championship belts she uses as tea trays. Nobody counts them, because everyone is afraid to.",
@@ -542,7 +542,7 @@ const NPC_DATA = [
   {
     name: "Vesper",
     subtitle: "Tabaxi · Wizard",
-    role: "Senior Archivist, HERO Guild",
+    role: "Research Archivist, Guild Headquarters",
     location: "Midanthis",
     guildMember: true, metByPlayers: true,
     description: "A sleek, silver-furred cat-person of mercurial focus who can locate any document in the archive within thirty seconds and then become completely distracted by an unrelated one for forty-five minutes. Her knowledge is genuinely encyclopaedic, if you can keep her attention long enough to access it.",
@@ -657,7 +657,7 @@ function buildCard(npc) {
       </div>`;
   }
 
-  const subtitleLine = [npc.subtitle, npc.role].filter(Boolean).join(' · ');
+  const subtitleLine = [npc.role].filter(Boolean).join(' · ');
   const descBlock    = npc.description
     ? `<div class="card-desc">${npc.description}</div>` : '';
 
